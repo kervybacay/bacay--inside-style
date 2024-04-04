@@ -134,6 +134,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 .header ul{
     display: flex;
@@ -147,6 +148,7 @@ img {
 }
 .header .header_wrapper ul li a:hover{
     color: var(--clr-primary)
+    
 }
 
 /* MOBILE RESPONSIVE */
@@ -455,7 +457,7 @@ padding: 1rem;
 .aboutbanner_right p{
     margin-bottom: 1.5rem;
     text-align: justify;
-
+    
 }
 .aboutbanner_right ul{
     display: flex;
@@ -479,7 +481,18 @@ padding: 1rem;
     height: .2rem;
     bottom: .5rem;
     right: 1rem;
-    left: 0;
+}
+/* about page banner right */
+@media screen and (max-width: 520px){
+    .aboutbanner_left{
+        display: none;
+    }
+    .aboutbanner_right h1{
+        font-size: 4rem;
+    }
+    .aboutbanner_right ul li a{
+        font-size: 1.5rem;
+    }
 }
 
 /* LATEST STYLE SECTION */
@@ -525,9 +538,86 @@ padding: 1rem;
     margin-bottom: 5rem;
     margin-left: 2rem;
     margin-right: 2rem;
-    
+    text-align: justify ;
+}
+/* LATEST STYLE MOBILE */
+@media screen and (max-width:520px){
+    .lateststyle h2::after{
+        display: none;
+    }
+    .lateststyle_wrapper{
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
 
+/* CATALOG BANNER */
+.catalogbanner_bg{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5),rgba(255, 255, 255, 0)),
+    url(./img/catalog-banner.png);
+    height: 100vh;
+    background-size:cover;
+    background-repeat: no-repeat;
+    /* to center the text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.catalogbanner h1{
+    font-size: 7rem;
+    font-weight: 700;
+    color: var(--clr-primary);
+}
+.catalogbanner p{
+    font-size: 3rem;
+    line-height: 2.5rem;
+}
+/* INTERIOR DESIGN PACKAGE */
+.package h2 {
+    color: var(--clr-primary);
+    font-size: 6rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 3rem;
+}
+
+.package_theme {
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.package_left img{
+    width: 500rem;
+    margin-left: 19rem;
+    max-width: 60rem;
+}
+.package_right{
+    text-align: center;
+    justify-content: center;
+    text-align: justify;
+    margin-left: 19rem;
+    margin-right: 19rem;
+}
+
+
+
+.package_theme:nth-child(odd){
+    background-color: var(--clr-semilight);
+    flex-direction: row-reverse; 
+    max-width: 60;
+    justify-content: space-between;
+
+    .package_right{
+        margin-left: 18rem;
+        
+    }
+    .package_left{
+        margin-right: 18rem;
+    }
+    
+} 
 
 /* REPEATABLE */
 .btn{
