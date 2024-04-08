@@ -769,7 +769,10 @@ justify-content: flex-end;
     .design_wrapper{
         grid-template-columns: 1fr;
         display: grid;
-
+    }
+    .projects_wrapper{
+        grid-template-columns: 1fr;
+        
     }
 }
 
@@ -781,28 +784,28 @@ justify-content: flex-end;
 .contactPage h2 {
     font-size: 30px;
     font-weight: 700;
-  }
-  
-  .contactPage h1{
+}
+
+.contactPage h1{
     font-size: 40px;
     font-weight: 700;
     color: var(--clr-primary);
-  }
-  .contacPage_wrapper {
+}
+.contacPage_wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
-  }
-  .contact__form input,
-  .contact__form textarea {
+}
+.contact__form input,
+.contact__form textarea {
     border: none;
     background-color: var(transparent);
     width: 100%;
     border-bottom: 1px solid gray;
     padding: 10px 16px;
-  }
-  
-  .contact__form button{
+}
+
+.contact__form button{
     width: 100%;
     padding: 10px 16px;
     background-color: var(--clr-dark);
@@ -836,7 +839,7 @@ justify-content: flex-end;
     .contacPage_wrapper{ 
         flex-direction: column;
         grid-template-columns: 1fr;
-        padding: 3rem;
+        padding: 1rem;
     }
 }
 
