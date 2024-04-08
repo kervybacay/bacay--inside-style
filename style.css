@@ -559,7 +559,6 @@ padding: 1rem;
     height: 100vh;
     background-size:cover;
     background-repeat: no-repeat;
-    /* to center the text */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -620,7 +619,26 @@ padding: 1rem;
         justify-content: center;
         text-align: justify;
     }
-} 
+}
+.package_theme:nth-child(odd)::before{
+    content:"";
+    position: absolute;
+    top:0;
+    width: 800rem;
+    height: 100%;;
+    background-color: var(--clr-semilight);
+    right: 100%;
+}
+.package_theme:nth-child(odd)::after{
+    content:"";
+    position: absolute;
+    top:0;
+    width: 800rem;
+    height: 100%;;
+    background-color: var(--clr-semilight);
+    left: 100%;
+}
+
 
 @media screen and (max-width: 520px){
     .catalogbanner{
@@ -675,6 +693,9 @@ padding: 1rem;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2rem;
 }
+.design_cards p{
+    text-align: justify;
+}
 .cards.cards{
     padding: 2rem;
     background-color: var(--clr-semilight);
@@ -704,7 +725,7 @@ display: flex;
 margin-bottom: 3rem;
 font-size: 3.5rem;
 color: var(--clr-dark);
-display: flex;
+display: flex;  
 align-items: flex-end;
 justify-content: flex-end;  
 }
@@ -732,17 +753,32 @@ justify-content: flex-end;
     display: flex;
     justify-content: space-between;
 }
-@media screen and (max-width: 520px){
+@media (max-width: 520px) {
+    .updates{
+    flex-direction: column;
+    }
+    .updates_wrapper img{
+        display: none;
+    }
     .updates_wrapper{
         flex-direction: column;
+    }
+    .design_wrapper{
+        flex-direction: column;
+    }
+    .design_wrapper{
+        grid-template-columns: 1fr;
+        display: grid;
+
+    }
 }
-}
+
 /* CONTACT */
 .contactPage {
     padding: 20rem 0;
-  }
-  
-  .contactPage h2 {
+}
+
+.contactPage h2 {
     font-size: 30px;
     font-weight: 700;
   }
@@ -796,8 +832,11 @@ justify-content: flex-end;
 }
 
 @media (max-width: 520px) {
-    .contactPage {
-    flex-direction: column;
+    
+    .contacPage_wrapper{ 
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        padding: 3rem;
     }
 }
 
